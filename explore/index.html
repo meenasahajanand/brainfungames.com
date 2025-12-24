@@ -6485,9 +6485,7 @@ src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
             <p class="introduce">&copy; Goodfinancer.com</p>
         </div>
     </footer>
-    <script type="text/javascript">
-        var viewHeight = document.documentElement.clientHeight; function debounce(e, t) { var n = null; return function () { n && clearTimeout(n), n = setTimeout(e, t) } } function lazyLoadImgs() { let e = document.querySelectorAll("img[data-load]"); e.forEach(function (e) { let t = e.parentElement.getBoundingClientRect(); (0 != t.top || 0 != t.bottom || 0 != t.left || 0 != t.right || 0 != t.width || 0 != t.height || 0 != t.x || 0 != t.y) && !e.dataset.loaded && (e.onload = function () { this.style.display = "block"; let e = this.parentElement.getElementsByClassName("loading-img"); e[0] && (e[0].style.display = "none") }, t.bottom >= 0 && t.top < viewHeight && (e.setAttribute("src", e.dataset.load), e.setAttribute("data-loaded", !0))) }) } lazyLoadImgs(), document.addEventListener("scroll", debounce(lazyLoadImgs, 100)), document.addEventListener("resize", debounce(() => { viewHeight = document.documentElement.clientHeight, lazyLoadImgs() }, 200));
-    </script>
+    <script src="../js/universal-image-loader.js"></script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
         integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
