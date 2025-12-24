@@ -323,7 +323,12 @@
         }
 
         .lazy-load {
-            display: none
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .lazy-load[data-loaded="true"] {
+            opacity: 1;
         }
 
         .game-item-title {
