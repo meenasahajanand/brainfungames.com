@@ -30,28 +30,23 @@
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
 
+ <!-- Google tag (gtag.js) --> 
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XP58LXF6R"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-5XP58LXF6R');
+</script> 
 
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17807197056"></script>
-    
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17807197056');
-    </script>
-     Google tag (gtag.js) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q3LWZZEMY"></script> -->
-    <!-- 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-6Q3LWZZEMY');
-    </script>  --> 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830746871"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'AW-17830746871');
+</script> 
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -62,42 +57,42 @@
 
 
 
+  <script type="text/javascript"> 
+    function reward(event, url, type) {
+        document.querySelector(".body-loading").style.display = "flex";
+          setTimeout(function(){
+            showTip(url, type);
+          } , 5000);
+    }
+    function showTip(url, type) { 
+fbq('track', 'Lead');
+        document.querySelector(".body-loading .loader").style.display = "none";
+        document.querySelector(".tooltip").style.display = "block";
+        let text = type === "apple" ? "App Store" : "Google Play";
+        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+        document.querySelector(".tooltip-button-continue").href = url;
+        document
+            .querySelector(".tooltip-button-cancel")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+                window.location.reload();
+            });
+        document
+            .querySelector(".tooltip-button-continue")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+            });
 
-    <!-- 
-    <script type="text/javascript">
-        function reward(event, url, type) {
-            document.querySelector(".body-loading").style.display = "flex";
-            setTimeout(function () {
-                showTip(url, type);
-            }, 5000);
+
+        try{
+          gtag('event', 'conversion', {'send_to':  'AW-17830746871/eE9KCKu7i9cbEPe1rrZC'});
+        }catch(e){
+          console.log(e);
         }
-        function showTip(url, type) {
-            document.querySelector(".body-loading .loader").style.display = "none";
-            document.querySelector(".tooltip").style.display = "block";
-            let text = type === "apple" ? "App Store" : "Google Play";
-            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-            document.querySelector(".tooltip-button-continue").href = url;
-            document
-                .querySelector(".tooltip-button-cancel")
-                .addEventListener("click", function () {
-                    document.querySelector(".body-loading").style.display = "none";
-                    window.location.reload();
-                });
-            document
-                .querySelector(".tooltip-button-continue")
-                .addEventListener("click", function () {
-                    document.querySelector(".body-loading").style.display = "none";
-                });
+    }
 
-
-            try {
-                gtag('event', 'conversion', { 'send_to': 'AW-17807197056/nNsbCMKMjNIbEICHkatC' });
-            } catch (e) {
-                console.log(e);
-            }
-        }
-
-    </script> -->
+    </script>
+  
     <style>
         .ads,
         .detail-main-container {

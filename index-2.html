@@ -21,36 +21,62 @@ googletag.display(slot);
 </script>
 
 
-       <!-- Google tag (gtag.js) --> 
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H75J10DFR6"></script>
+    <!-- Google tag (gtag.js) --> 
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XP58LXF6R"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'G-H75J10DFR6');
-</script> -->
+gtag('config', 'G-5XP58LXF6R');
+</script> 
 
-<!-- Google tag (gtag.js) --> 
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17060091494"></script>
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17830746871"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'AW-17060091494');
-</script> -->
+gtag('config', 'AW-17830746871');
+</script> 
 
 
     
 
-   <!-- Google Tag Manager -->
-<!-- <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
- '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
- })(window,document,'script','dataLayer','GTM-53DGMKRX');
-</script> -->
-<!-- End Google Tag Manager -->
+ <script type="text/javascript"> 
+    function reward(event, url, type) {
+        document.querySelector(".body-loading").style.display = "flex";
+          setTimeout(function(){
+            showTip(url, type);
+          } , 5000);
+    }
+    function showTip(url, type) { 
+fbq('track', 'Lead');
+        document.querySelector(".body-loading .loader").style.display = "none";
+        document.querySelector(".tooltip").style.display = "block";
+        let text = type === "apple" ? "App Store" : "Google Play";
+        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+        document.querySelector(".tooltip-button-continue").href = url;
+        document
+            .querySelector(".tooltip-button-cancel")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+                window.location.reload();
+            });
+        document
+            .querySelector(".tooltip-button-continue")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+            });
+
+
+        try{
+          gtag('event', 'conversion', {'send_to':  'AW-17830746871/eE9KCKu7i9cbEPe1rrZC'});
+        }catch(e){
+          console.log(e);
+        }
+    }
+
+    </script>
 
 
 </head>
