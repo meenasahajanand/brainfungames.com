@@ -29,16 +29,55 @@
 
         gtag('config', 'G-5XP58LXF6R');
     </script>
-    
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"> </script>
-<script>window.googletag = window.googletag || { cmd: [] };
-googletag.cmd.push(function() {
-var slot = googletag.defineOutOfPageSlot('/23330730517/brainfungames.com_inter', googletag.enums.OutOfPageFormat.INTERSTITIAL);
-if (slot) slot.addService(googletag.pubads());
-googletag.enableServices();
-googletag.display(slot);
-});
+   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+  let interstitialSlot;
+
+  googletag.cmd.push(() => {
+    // ✅ Define interstitial slot
+    interstitialSlot = googletag.defineOutOfPageSlot(
+      '/23330730517/brainfungames.com_inter',
+      googletag.enums.OutOfPageFormat.INTERSTITIAL
+    );
+
+    if (interstitialSlot) {
+      interstitialSlot.addService(googletag.pubads());
+    }
+
+    googletag.enableServices();
+
+    // ✅ Preload the interstitial ad immediately after page load
+    if (interstitialSlot) {
+      googletag.display(interstitialSlot);
+    }
+  });
+
+  // ✅ Function to show interstitial and then call callback
+  function showInterstitialAd(callback) {
+    googletag.cmd.push(() => {
+      if (interstitialSlot) {
+        googletag.pubads().display(interstitialSlot);
+      }
+      // ⏳ Fast fallback: max wait 500ms
+      setTimeout(() => {
+        if (typeof callback === 'function') callback();
+      }, 500);
+    });
+  }
 </script>
+
+
+    <style>
+      #link {
+        display: none;
+      }
+
+      div.content {
+        position: fixed;
+        top: 50%;
+      }
+    </style>
 
 
    
