@@ -66,14 +66,38 @@ gtag('config', 'AW-17830746871');
 
 
         try{
-          gtag('event', 'conversion', {'send_to':  'AW-17830746871/eE9KCKu7i9cbEPe1rrZC'});
+         console.log("tracking succses");
         }catch(e){
           console.log(e);
         }
     }
 
     </script>
+<script>
+  // Ye function already aapke head mein defined hai, ise call kar rahe hain
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17830746871/eE9KCKu7i9cbEPe1rrZC',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+    });
+    return false;
+  }
 
+  // Page load par conversion fire karne ke liye ye line
+  gtag_report_conversion();
+
+  // Extra: Page view event bhi manually bhejna ho to
+  gtag('event', 'page_view', {
+    'send_to': 'AW-17959061602'
+  });
+</script>
 
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 
