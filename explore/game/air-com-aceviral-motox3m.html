@@ -104,30 +104,26 @@ fbq('track', 'Lead');
         }
     }
    </script> 
+
+
+
+<!-- Event snippet for Conversion conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
- 
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17830746871/eE9KCKu7i9cbEPe1rrZC',
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+       'send_to': 'AW-17830746871/eE9KCKu7i9cbEPe1rrZC',
       'value': 1.0,
       'currency': 'INR',
       'event_callback': callback
-    });
-    return false;
-  }
-
-  // Page load par conversion fire karne ke liye ye line
-  gtag_report_conversion();
-
-  // Extra: Page view event bhi manually bhejna ho to
-  gtag('event', 'page_view', {
-    'send_to': 'AW-17830746871'
   });
+  return false;
+}
 </script>
 
 
