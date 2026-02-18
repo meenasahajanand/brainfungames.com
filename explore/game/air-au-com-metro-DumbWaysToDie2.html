@@ -60,40 +60,65 @@
 
 
 
-    <!-- <script type="text/javascript">
-        function reward(event, url, type) {
-            document.querySelector(".body-loading").style.display = "flex";
-            setTimeout(function () {
-                showTip(url, type);
-            }, 5000);
+  <script type="text/javascript"> 
+    function reward(event, url, type) {
+        document.querySelector(".body-loading").style.display = "flex";
+          setTimeout(function(){
+            showTip(url, type);
+          } , 5000);
+    }
+    function showTip(url, type) { 
+fbq('track', 'Lead');
+        document.querySelector(".body-loading .loader").style.display = "none";
+        document.querySelector(".tooltip").style.display = "block";
+        let text = type === "apple" ? "App Store" : "Google Play";
+        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+        document.querySelector(".tooltip-button-continue").href = url;
+        document
+            .querySelector(".tooltip-button-cancel")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+                window.location.reload();
+            });
+        document
+            .querySelector(".tooltip-button-continue")
+            .addEventListener("click", function () {
+                document.querySelector(".body-loading").style.display = "none";
+            });
+
+
+        try{
+          console.log("Conversion Tracked");
+        }catch(e){
+          console.log(e);
         }
-        function showTip(url, type) {
-            document.querySelector(".body-loading .loader").style.display = "none";
-            document.querySelector(".tooltip").style.display = "block";
-            let text = type === "apple" ? "App Store" : "Google Play";
-            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-            document.querySelector(".tooltip-button-continue").href = url;
-            document
-                .querySelector(".tooltip-button-cancel")
-                .addEventListener("click", function () {
-                    document.querySelector(".body-loading").style.display = "none";
-                    window.location.reload();
-                });
-            document
-                .querySelector(".tooltip-button-continue")
-                .addEventListener("click", function () {
-                    document.querySelector(".body-loading").style.display = "none";
-                });
+    }
+   </script> 
+<script>
+ 
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17830746871/eE9KCKu7i9cbEPe1rrZC',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+    });
+    return false;
+  }
 
+  // Page load par conversion fire karne ke liye ye line
+  gtag_report_conversion();
 
-            try {
-                gtag('event', 'conversion', { 'send_to': 'AW-17807197056/nNsbCMKMjNIbEICHkatC' });
-            } catch (e) {
-                console.log(e);
-            }
-        }
-
-    </script> -->
+  // Extra: Page view event bhi manually bhejna ho to
+  gtag('event', 'page_view', {
+    'send_to': 'AW-17830746871'
+  });
+</script>
     <style>
         .ads,
         .detail-main-container {
